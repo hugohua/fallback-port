@@ -7,6 +7,11 @@ If multiple applications running same port then you will get the below error `(E
 
 This module will give you an available port and kill other processes.
 
+## Install
+
+```
+$ npm install fallback-port
+```
 
 ## API
 
