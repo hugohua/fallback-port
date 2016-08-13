@@ -2,7 +2,7 @@
   "name": "fallback-port",
   "main": "lib/index",
   "description": "get an available port and preventing eaddrinuse error.",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "licenses": "MIT",
   "keywords": [
     "fallback",
@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "os": "^0.1.1",
-    "shelljs": "^0.7.3"
+    "shelljs": "^0.7.3",
+    "tree-kill": "^1.1.0"
   }
 }

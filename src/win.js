@@ -2,16 +2,17 @@
 'use strict';
 
 import shelljs from 'shelljs';
+import treeKill from 'tree-kill';
 
 let win = {
     pid : port =>{
-        let result = shelljs.exec(`netstat -anop tcp | find /i ":${port}" |  find "LISTENING"`,{silent:true}).stdout;
+        let result = shelljs.exec(`netstat -anop tcp | findstr ":${port}" |  findstr "LISTENING"`,{silent:true}).stdout;
         return result ? result.split(/\s+/)[5] : null
     },
 
     kill : port =>{
         let pid = win.pid(port);
-        return shelljs.exec(`taskkill /F /pid ${port}`,{silent:true}).stdout;
+        treeKill(pid);
     }
 };
 
