@@ -10,7 +10,7 @@ let win = {
     },
 
     kill : port =>{
-        let pid = unix.pid(port);
+        let pid = win.pid(port);
         return shelljs.exec(`taskkill /F /pid ${port}`,{silent:true}).stdout;
     }
 };

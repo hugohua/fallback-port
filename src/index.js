@@ -7,7 +7,10 @@ import unix from './unix';
 
 let platform = os.type().match(/^Win/) ? 'win' : 'unix';
 
-class FallbackPort {
+console.log(platform,'==');
+
+
+export default class FallbackPort {
     constructor(port) {
         this.port = port;
     }

@@ -36,7 +36,11 @@ var fallbackPort = new FallbackPort(8080);
 var pid = fallbackPort.getPID();
 
 //return available port
-var port = fallbackPort.getPort();
+var otherPort = fallbackPort.getPort();
+
+if(otherPort != port){
+    console.log( `${port} is taken` )
+}
 
 //kill process
 fallbackPort.kill();
