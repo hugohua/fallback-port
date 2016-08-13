@@ -2,6 +2,7 @@
 
 import shelljs from 'shelljs';
 import os from 'os';
+import treeKill from 'tree-kill';
 import win from './win';
 import unix from './unix';
 
@@ -34,7 +35,7 @@ export default class FallbackPort {
      * @returns {*}
      */
     kill () {
-        return platform === 'win' ? win.kill(this.port) : unix.kill(this.port)
+        treeKill(this.getPid())
     }
 
 }
