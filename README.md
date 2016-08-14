@@ -1,4 +1,4 @@
-# fallback-port
+# fallback-port [![Build Status](https://travis-ci.org/hugohua/fallback-port.svg?branch=master)](https://travis-ci.org/hugohua/fallback-port)
 
 > get an available port and preventing eaddrinuse error.
 
