@@ -29,6 +29,7 @@ build/Release
 # Dependency directories
 node_modules
 lib
+!test/lib
 jspm_packages
 
 # Optional npm cache directory
