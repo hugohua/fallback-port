@@ -2,6 +2,7 @@
 > get an available port and preventing eaddrinuse error.
 
 [![Build Status](https://travis-ci.org/hugohua/fallback-port.svg?branch=master)](https://travis-ci.org/hugohua/fallback-port)
+[![codecov](https://codecov.io/gh/hugohua/fallback-port/branch/master/graph/badge.svg)](https://codecov.io/gh/hugohua/fallback-port)
 [![npm version](https://badge.fury.io/js/fallback-port.svg)](https://badge.fury.io/js/fallback-port)
 
 If multiple applications running same port then you will get the below error `(Error: listen EADDRINUSE)`.
