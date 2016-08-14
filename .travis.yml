@@ -4,9 +4,8 @@ install:
   - npm install -g codecov
   - npm install -g istanbul
 node_js:
-  - "6"
   - "5.0"
   - "4.0"
 script:
-  - npm run test
+  - ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -R spec
   - codecov
