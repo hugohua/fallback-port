@@ -2,7 +2,7 @@
   "name": "fallback-port",
   "main": "lib/index",
   "description": "get an available port and preventing eaddrinuse error.",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "licenses": "MIT",
   "keywords": [
     "fallback",
