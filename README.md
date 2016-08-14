@@ -17,7 +17,7 @@ $ npm install fallback-port
 
 ## API
 
-### getPID
+### getPid
 
 Finding the PID from default port.
 
@@ -29,7 +29,7 @@ Tries return a random available port if the requested port is taken
 
 ### kill
 
-Find (and kill) process locking port.
+Find and kill process locking port.
 
 ## Example
 
@@ -39,8 +39,8 @@ var port = 8080;
 
 var fallbackPort = new FallbackPort(8080);
 
-//return number or null
-var pid = fallbackPort.getPID();
+//return pid number or null
+var pid = fallbackPort.getPid();
 
 //return available port
 var otherPort = fallbackPort.getPort();

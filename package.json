@@ -2,7 +2,7 @@
   "name": "fallback-port",
   "main": "lib/index",
   "description": "get an available port and preventing eaddrinuse error.",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "licenses": "MIT",
   "keywords": [
     "fallback",
@@ -19,14 +19,16 @@
   "scripts": {
     "start": "node_modules/babel-cli/bin/babel.js --watch src --out-dir lib",
     "prepublish": "node_modules/babel-cli/bin/babel.js src --out-dir lib",
-    "coverage": "NODE_ENV=test npm test && nyc report --reporter=text-lcov | coveralls",
-    "pretest": "npm run prepublish",
-    "test": "nyc mocha"
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
     "babel-plugin-add-module-exports": "~0.1.2",
-    "babel-preset-es2015": "^6.13.2"
+    "babel-preset-es2015": "^6.13.2",
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.4",
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.4"
   },
   "author": {
     "name": "hugohua",
@@ -49,7 +51,6 @@
   },
   "dependencies": {
     "os": "^0.1.1",
-    "shelljs": "^0.7.3",
-    "tree-kill": "^1.1.0"
+    "shelljs": "^0.7.3"
   }
 }

@@ -2,12 +2,10 @@
 
 import shelljs from 'shelljs';
 import os from 'os';
-import treeKill from 'tree-kill';
 import win from './win';
 import unix from './unix';
 
 let platform = os.type().match(/^Win/) ? 'win' : 'unix';
-
 
 export default class FallbackPort {
     constructor(port) {
@@ -35,7 +33,7 @@ export default class FallbackPort {
      * @returns {*}
      */
     kill () {
-        treeKill(this.getPid())
+        return platform === 'win' ? win.kill(this.port) : unix.kill(this.port)
     }
 
 }
